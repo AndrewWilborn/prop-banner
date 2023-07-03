@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import Main from './components/Main.jsx'
+import Footer from './components/Footer';
+import Body from './components/Body';
+import Banner from './components/Banner';
+import Banner2 from './components/Banner2';
+import Banner3 from './components/Banner3';
+
+const bannerStyle1 = {
+  title: "New Title",
+  content: "New Content",
+  bgColor: "cyan",
+  fontColor: "#202020"
+}
+
+const bannerStyle2 = {
+  title: "Destructuring",
+  content: "some content",
+  bgColor: "grey",
+  fontColor: "orange"
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Main />
+      <Body />
+      <Banner
+        title="New Title"
+        content="New Content" 
+        bgColor="pink"
+        fontColor="red" />
+      <Banner
+        title="Dog"
+        content="cat"
+        bgColor="blue" 
+        fontColor="white"/>
+      <Banner2 data={bannerStyle1}/>
+      <Banner3 data={bannerStyle2}/>
+      <Footer />
     </div>
   );
 }
