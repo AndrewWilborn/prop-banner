@@ -5,6 +5,7 @@ import Body from './components/Body';
 import Banner from './components/Banner';
 import Banner2 from './components/Banner2';
 import Banner3 from './components/Banner3';
+import Banner4 from './components/Banner4';
 
 const bannerStyle1 = {
   title: "New Title",
@@ -37,6 +38,7 @@ function App() {
         fontColor="white"/>
       <Banner2 data={bannerStyle1}/>
       <Banner3 data={bannerStyle2}/>
+      <Banner4 n={3} wrapperText="hello" data={bannerStyle1}/>
       <Footer />
     </div>
   );
